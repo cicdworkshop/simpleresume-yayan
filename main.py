@@ -11,7 +11,7 @@ APP                 = Flask(__name__)
 HOST                = "0.0.0.0"
 PORT                = 5000
 DATABASE_USER       = "admin"
-# DATABASE_PASSWORD   = "admin12345678"
+
 
 
 csrf = CSRFProtect()
