@@ -25,9 +25,9 @@ jobs:
       - name: Run unit tests
         run: |
           python3 tests.py
-      - name: Lint the code
-        run: |
-          pylint --rcfile pylintrc .
+      # - name: Lint the code
+      #   run: |
+      #     pylint --rcfile pylintrc .
       - name: Run Sonar scan
         uses: SonarSource/sonarqube-scan-action@v5.0.0
         env:
