@@ -25,19 +25,19 @@ jobs:
       - name: Run unit tests
         run: |
           python3 tests.py
-      # - name: Lint the code
-      #   run: |
-      #     pylint --rcfile pylintrc .
-      # - name: Run Sonar scan
-      #   uses: SonarSource/sonarqube-scan-action@v5.0.0
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
-      #     SONAR_HOST_URL: https://sonarcloud.io
-      # - name: Run Sonar Quality Gate check
-      #   id: sonarqube-quality-gate-check
-      #   uses: sonarsource/sonarqube-quality-gate-action@master
-      #   with:
-      #     pollingTimeoutSec: 600
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
-      #     SONAR_HOST_URL: https://sonarcloud.io
+      - name: Lint the code
+        run: |
+          pylint --rcfile pylintrc .
+      - name: Run Sonar scan
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: https://sonarcloud.io
+      - name: Run Sonar Quality Gate check
+        id: sonarqube-quality-gate-check
+        uses: sonarsource/sonarqube-quality-gate-action@master
+        with:
+          pollingTimeoutSec: 600
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: https://sonarcloud.io
