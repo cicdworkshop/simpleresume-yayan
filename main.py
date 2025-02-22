@@ -7,7 +7,7 @@ from users import load_dummy_users
 
 # Configuration
 APP                 = Flask(__name__)
-APP.config["DEBUG"] = True
+# APP.config["DEBUG"] = True
 HOST                = "0.0.0.0"
 PORT                = 5000
 DATABASE_USER       = "admin"
