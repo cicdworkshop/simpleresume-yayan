@@ -60,7 +60,7 @@ def load_dummy_users() -> list:
         user.education      = user_data['education']
         user.certifications = user_data["certifications"]
         user.sort_user_experience()
-        user.sort_user_certification()
+        user.sort_user_certifications()
         # (FOR WORKSHOP)
         # Call the function to sort user certifications.
         users.append(user)
